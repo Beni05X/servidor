@@ -21,10 +21,8 @@ app.get("/", (req, res) => {
 // Rutas de usuario
 app.use("/benilde", usuarioRoutes);
 
-// Para desarrollo local
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`🚀 Servidor corriendo en el puerto ${PORT}`);
-});
+// ❌ IMPORTANTE: Quitar app.listen() en Vercel
+// Vercel maneja el servidor internamente.
 
-module.exports = app; // Necesario para Vercel
+// ✔️ Exportar la app para que Vercel la use
+module.exports = app;
