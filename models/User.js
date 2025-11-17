@@ -9,7 +9,6 @@ const userSchema = new mongoose.Schema({
   cuenta_bloqueada: { type: Boolean, default: false },
   fecha_bloqueo: { type: Date, default: null },
   intentos_fallidos: { type: Number, default: 0 }
-}, 
-{ timestamps: true });
+}, { timestamps: true });
 
 export default mongoose.model("User", userSchema);
